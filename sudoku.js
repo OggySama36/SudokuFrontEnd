@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchSudoku(level) {
         try {
-            const res = await fetch(`http://localhost:8080/api/sudoku/${level}`);
+            const res = await fetch(`https://sudokubackend-v6ga.onrender.com/api/sudoku/${level}`);
             if (!res.ok) throw new Error("Lỗi server");
             const puzzle = await res.json(); 
             solutionBoard = puzzle.map(row => [...row]);
